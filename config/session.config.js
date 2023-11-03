@@ -6,7 +6,7 @@ module.exports = app => {
     app.set('trust proxy', 1);
     app.use(
         session({
-            secret: process.env.SESS_SECRET,
+            secret: process.env.SESS_SECRET ?? 'secret',
             resave: true,
             saveUninitialized: false,
             cookie: {
