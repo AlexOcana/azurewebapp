@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'gimnasioApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AAFC2F79F2024B9F9DE67FC771D8F94F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3013DEB3E7124F9597FA40BAC26C3C00 }}
           package: .
