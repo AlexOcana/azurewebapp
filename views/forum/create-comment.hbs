@@ -1,0 +1,57 @@
+<body class="createNewComment">
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 formComment">
+
+                <h1>New post</h1>
+                <hr>
+                <form action="/forum/create-comment" method="POST">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="user" class="form-label">@User</label>
+                                <input type="text" class="form-control" id="title" name="user">
+                            </div>
+
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="gameName" class="form-label">Game Name</label>
+                                    <input type="text" class="form-control" id="gameName" name="gameName">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="topic" name="subject">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="paltforms"></label>
+                            <select type="text" id="platforms" name="platform">
+                                <option value="PlayStation 5">Playstation 5</option>
+                                <optionn value="Xbox Series S/X">Xbox Series S/X</option>
+                                    <option value="PlayStation 4">PlayStation 4</option>
+                                    <option value="PC">PC</option>
+                                    <option value="PlayStation 3">Playstation 3</option>
+                                    <option value="Xbox 360">Xbox 360</option>
+                                    <option value="Xbox One">Xbox One</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-dark btn-lg"
+                            style="background-color:orange;color:rgb(0, 0, 0)">Create
+                            Comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

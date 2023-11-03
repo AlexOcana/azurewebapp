@@ -1,0 +1,40 @@
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 20px;">Events List
+            <a href="/events/create" class="btn btn-dark mb-3" style="margin-left:600px">New event</a>
+        </h1>
+
+        <ul>
+            {{#each events }}
+
+            <body>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{eventImg}}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{eventName}}</h5>
+                                <p class="card-text">{{description}}</p>
+
+                                {{#if userRoles.isAdmin}}
+
+                                <a href="/events/{{_id}}/details" class="btn btn-dark mb-1">Details</a>
+
+                                {{!-- <form action="/events/{{_id}}/delete" method="POST">
+                                    <input type="submit" value="Delete">
+                                </form> --}}
+
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            <hr>
+            {{/each}}
+        </ul>
+
+    </div>
+</body>

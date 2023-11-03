@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Game Details</h3>
+    <div class="card">
+        <img src="{{game.background_image}}" class="card-img-top" alt="videogame-image"
+            style="width: 100ev; height:350px">
+        <div class="card-body">
+            <h5 class="card-title">{{game.name}}</h5>
+            <p class="card-text">{{{game.description}}}</p>
+            {{#each game.platforms}}
+            <li>
+                <span class="platform-name">{{platform.name}}</span>
+                <span class="release-date">{{released_at}}</span>
+            </li>
+            {{/each}}
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+
+                        <div class="comentarios">
+                            <p v-for="items in items" v-text="items"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem"></textarea>
+                        <a href="/writecomments" class="btn btn-dark mb-3">Write a comments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<body>
+    <div class="container mt-5">
+        <div class="card mb-3" style="max-width: 1000px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <div class="card-body">
+                        {{#each comment}}
+                        <h5 class="card-title">{{ comment.user }}</h5>
+                        <p class="card-text">{{ comment.subject }}</p>
+                        <li class="list-group-item">{{comment.platform}}</li>
+                        {{/each}}
+                        </ul>
+                        <div class="text">
+                            {{#if userRoles.isAdmin}}
+                            <a href="/comments/edit/{{_id}}" class="btn btn-warning">Editar</a>
+                            {{/if}}
+                            {{#if userRoles.isME}}
+                            <a href="/events/edit/{{_id}}" class="btn btn-warning">Editar</a>
+                            {{/if}}
+                            <a href="/events" class="btn btn-dark mb-3">Return</a>
+                            <a href="/" class="btn btn-dark mb-3">Home Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

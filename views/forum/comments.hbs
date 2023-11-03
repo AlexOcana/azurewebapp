@@ -1,0 +1,21 @@
+<body class="commentList">
+    <div class="container">
+        <h1>Video Games Foro</h1>
+        <hr>
+        <a href="forum/create-comment" class=" btn btn-dark"
+            style="margin-left:1100px; color:rgb(0, 0, 0);background-color:orange">New
+            comment</a>
+        {{#each comments}}
+        <h3 class="card-title mb-3">User: {{user}}</h3>
+        <h5 class="card-subtitle mb-2 text-body">Subject: {{subject}}</h5>
+        <h6 class="card-subtitle mb-2 text-body">Platform: {{platform}}</h6>
+        <h6 class="card-subtitle mb-2 text-body">Game Name: {{gameName}}</h6>
+        <p class="card-subtitle mb-2 text-body">Description: {{description}}</p>
+        <form action="/forum/delete/{{_id}}" method="POST">
+            {{#if userRoles.isAdmin}}<input type="submit" value="Delete">{{/if}}
+        </form>
+        <hr>
+        {{/each}}
+
+    </div>
+</body>

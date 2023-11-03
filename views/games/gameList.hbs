@@ -1,0 +1,70 @@
+<div class="container">
+
+
+    <h1>Start searching... @{{loggedUser.username}}</h1>
+
+
+    <form class="form-search content-search navbar-form" action="" method="post">
+        <div class="input-group">
+            <input placeholder="Search Videogame" class="form-control form-text" type="text" size="15"
+                maxlength="128" />
+        </div>
+    </form>
+
+    {{#each games}}
+
+
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card mt-4" style="max-width: 700px;"></div>
+            <img src="{{background_image}}" class="img-fluid rounded-start" alt="...">
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-body" style="align-content:center; margin-top:40px">
+                <h5 class="card-title">{{name}}
+                    <a href="/games/{{id}}/details" class="btn btn-dark" style="margin-left: 30px;">Details</a>
+                </h5>
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    {{!--
+</div>
+
+<div class="container">
+    <h1 class="mt-5">Información de países</h1>
+    <hr>
+    <input type="text" id="countryName" placeholder="Escribe un país...">
+    <p id="result" class="mt-5">Esperando info de la API...</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+
+    document.querySelector('#countryName').onkeyup = evt => {
+
+        const coutryName = evt.target.value
+
+        axios
+            .get(`https://restcountries.com/v3.1/name/${coutryName}`)
+            .then(response => printCountryInfo(response.data[0]))
+            .catch(err => console.log(err))
+    }
+
+
+    function printCountryInfo(info) {
+
+        const { capital, population, name } = info
+
+        let text = `El país ${name.common} tiene ${population} habitantes y su capital es ${capital[0]}`
+
+        document.querySelector('#result').innerHTML = text
+    }
+</script> --}}
